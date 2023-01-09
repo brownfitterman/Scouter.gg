@@ -48,6 +48,7 @@ const CollectionInformationStyle = styled.div`
         font-size: ${styleVar.font20};
         line-height: ${styleVar.lineHeight30};
         padding-left: 10px;
+
         @media screen and (max-width: 767px) {
           font-size: 12px;
           line-height: 12px;
@@ -56,8 +57,10 @@ const CollectionInformationStyle = styled.div`
       textarea {
         border-bottom: 1px solid #fff;
         display: block;
+        word-wrap: break-word;
+        word-break: break-all;
+        height: 60px;
         width: 70%;
-        all: revert;
         color: #ffc01f;
         font-size: ${styleVar.font20};
         line-height: ${styleVar.lineHeight30};

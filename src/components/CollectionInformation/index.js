@@ -49,7 +49,12 @@ const CollectionInformation = ({ setShowModel }) => {
         </div>
         <div className="form-group">
           <div className="label">Message</div>
-          <input name="Params3" onChange={handleChange} type="textarea" />
+          <textarea
+            name="Params3"
+            onChange={handleChange}
+            type="textarea"
+            value={form?.Params3 || ""}
+          />
         </div>
         <button onClick={(e) => handleSubmit(e)} className="cta">
           Send
