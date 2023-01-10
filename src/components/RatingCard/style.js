@@ -157,17 +157,17 @@ const RatingCardStyle = styled.div`
       gap: 10px;
       position: relative;
 
-      .packed {
-        background: url(${(props) => props.path});
+      .Packed {
+        background: url("100.svg");
       }
-      .busy {
-        background: url(${(props) => props.path});
+      .Busy {
+        background: url("80.svg");
       }
-      .calm {
-        background: url(${(props) => props.path});
+      .Calm {
+        background: url("50.svg");
       }
-      .dead {
-        background: url(${(props) => props.path});
+      .Dead {
+        background: url("25.svg");
       }
       .packed-status {
         background-size: cover;

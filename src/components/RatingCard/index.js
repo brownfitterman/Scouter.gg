@@ -31,7 +31,7 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
   };
 
   return (
-    <RatingCardStyle path={Dead}>
+    <RatingCardStyle path={packed}>
       {isLoading ? (
         <Loader />
       ) : (
@@ -87,7 +87,11 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
             {places?.map((place, index) => (
               <div className="rating-cards">
                 <div className="rating-meter">
-                  <span className="packed-status dead">
+                  <span
+                    className={
+                      "packed-status " + status(place[`BusyHours${day}`].split(",")[hour - 1])
+                    }
+                  >
                     <span>{`${place[`BusyHours${day}`].split(",")[hour - 1]}%`}</span>
                   </span>
                   <span className="status">

@@ -6,11 +6,11 @@ const Card = ({ data, setStep, step, setLocation }) => {
   const [loader, setLoader] = useState(false);
   const [isError, setIsError] = useState(false);
   const onLocation = (pos) => {
-    setLocation(pos.coords);
-    // setLocation({
-    //   latitude: 33.753746,
-    //   longitude: -84.38633,
-    // });
+    // setLocation(pos.coords);
+    setLocation({
+      latitude: 33.753746,
+      longitude: -84.38633,
+    });
     setLoader(false);
     setStep((prev) => prev + 1);
   };
