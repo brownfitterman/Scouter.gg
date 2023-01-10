@@ -5,6 +5,50 @@ const CrowdFilterStyle = styled.div`
   color: ${styleVar.white};
   text-align: center;
   padding: 0 27px;
+  .progress-bar0 {
+    width: 25%;
+    height: 6px;
+    background: #ffc01f;
+    position: fixed;
+    top: 102px;
+    left: 0;
+    @media screen and (max-width: 767px) {
+      top: 67px;
+    }
+  }
+  .progress-bar1 {
+    width: 50%;
+    height: 6px;
+    background: #ffc01f;
+    position: fixed;
+    top: 102px;
+    left: 0;
+    @media screen and (max-width: 767px) {
+      top: 67px;
+    }
+  }
+  .progress-bar2 {
+    width: 75%;
+    height: 6px;
+    background: #ffc01f;
+    position: fixed;
+    top: 102px;
+    left: 0;
+    @media screen and (max-width: 767px) {
+      top: 67px;
+    }
+  }
+  .progress-bar3 {
+    width: 100%;
+    height: 6px;
+    background: #ffc01f;
+    position: fixed;
+    top: 102px;
+    left: 0;
+    @media screen and (max-width: 767px) {
+      top: 67px;
+    }
+  }
   .description {
     font-size: ${styleVar.font32};
     line-height: ${styleVar.lineHeight50};

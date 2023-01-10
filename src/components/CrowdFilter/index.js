@@ -29,6 +29,7 @@ const CrowdFilter = ({ optionData, setOptionData, setStep, setShowPlaces }) => {
     <CrowdFilterStyle>
       {optionData[optionStep]?.description && (
         <React.Fragment>
+          <div className={"progress-bar" + optionStep}></div>
           <div className="description">
             {optionData[optionStep].description}
             <div className="sub-heading">{optionData[optionStep].heading}</div>
