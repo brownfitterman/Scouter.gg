@@ -143,9 +143,11 @@ const RatingCardStyle = styled.div`
     gap: 85px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 25px;
     @media screen and (max-width: 767px) {
       gap: 30px;
       padding: 0 10px;
+      margin-top: 0px;
     }
     .rating-cards {
       max-width: 488px;
