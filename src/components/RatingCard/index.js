@@ -31,7 +31,7 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
   };
 
   const statusCard = (num) => {
-    if ((num = 0)) {
+    if (num == 0) {
       return "Zero";
     } else if (num > 0 && num <= 25) {
       return "Dead";
