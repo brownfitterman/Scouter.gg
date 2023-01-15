@@ -52,7 +52,7 @@ const CrowdFilterStyle = styled.div`
   .description {
     font-size: ${styleVar.font32};
     line-height: ${styleVar.lineHeight50};
-    margin: 47px auto;
+    margin: 20px auto;
     max-width: 1000px;
     width: 100%;
     @media screen and (max-width: 767px) {
@@ -79,7 +79,7 @@ const CrowdFilterStyle = styled.div`
     gap: 50px;
     margin: 0 auto;
     justify-content: space-between;
-    margin-top: 43px;
+    margin-top: 15px;
     @media screen and (max-width: 767px) {
       gap: 25px;
       padding: 0 10px;
@@ -87,7 +87,7 @@ const CrowdFilterStyle = styled.div`
     .option-card {
       width: 50%;
       max-width: 240px;
-      height: 176px;
+      height: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -115,7 +115,7 @@ const CrowdFilterStyle = styled.div`
   .button-group {
     display: flex;
     justify-content: space-between;
-    margin: 54px 0 28px 0;
+    margin: 30px 0 28px 0;
     button {
       min-width: 304px;
       border: 1px solid #ffc01f;

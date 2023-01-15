@@ -30,6 +30,20 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
     }
   };
 
+  const statusCard = (num) => {
+    if ((num = 0)) {
+      return "Zero";
+    } else if (num > 0 && num <= 25) {
+      return "Dead";
+    } else if (num > 25 && num <= 50) {
+      return "Calm";
+    } else if (num > 50 && num <= 80) {
+      return "Busy";
+    } else if (num > 80 && num < 100) {
+      return "Packed";
+    }
+  };
+
   return (
     <RatingCardStyle path={packed}>
       {isLoading ? (
@@ -89,7 +103,7 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
                 <div className="rating-meter">
                   <span
                     className={
-                      "packed-status " + status(place[`BusyHours${day}`].split(",")[hour - 1])
+                      "packed-status " + statusCard(place[`BusyHours${day}`].split(",")[hour - 1])
                     }
                   >
                     <span>{`${place[`BusyHours${day}`].split(",")[hour - 1]}%`}</span>

@@ -156,7 +156,9 @@ const RatingCardStyle = styled.div`
       padding: 21px 10px 26px 10px;
       gap: 10px;
       position: relative;
-
+      .Zero {
+        background: url("0.svg");
+      }
       .Packed {
         background: url("100.svg");
       }
