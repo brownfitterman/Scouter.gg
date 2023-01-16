@@ -129,7 +129,7 @@ const handleSortOption = (option) => {
     case "MostReviewed":
       return {
         sortBy: "Rating_n",
-        sortDirection: "desc",
+        sortDirection: "asc",
       };
       break;
     case "TopRate":

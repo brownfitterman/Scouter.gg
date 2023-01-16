@@ -11,6 +11,10 @@ const HeaderStyle = styled.div`
   top: 0;
   left: 0;
   z-index: 9;
+  .logo-area {
+    cursor: pointer;
+  }
+
   @media screen and (max-width: 767px) {
     padding: 12px 20px;
     .logo-area {
@@ -22,6 +26,7 @@ const HeaderStyle = styled.div`
   .social-links {
     display: flex;
     gap: 20px;
+    cursor: pointer;
   }
 `;
 

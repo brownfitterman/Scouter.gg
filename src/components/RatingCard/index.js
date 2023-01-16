@@ -6,10 +6,10 @@ import packed from "../../assets/images/100.svg";
 import Busy from "../../assets/images/80.svg";
 import Calm from "../../assets/images/50.svg";
 import Dead from "../../assets/images/25.svg";
-import Busiest from "../../assets/images/packed.svg";
-import MostReviewed from "../../assets/images/MostReviewed.svg";
-import TopRated from "../../assets/images/TopRated.svg";
-import Nearest from "../../assets/images/Nearest.svg";
+import Busiest from "../../assets/images/busiest.png";
+import MostReviewed from "../../assets/images/most-reviewed.png";
+import TopRated from "../../assets/images/top-rated.png";
+import Nearest from "../../assets/images/nearest.png";
 
 const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -32,15 +32,27 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
 
   const statusCard = (num) => {
     if (num == 0) {
-      return "Zero";
-    } else if (num > 0 && num <= 25) {
-      return "Dead";
-    } else if (num > 25 && num <= 50) {
-      return "Calm";
-    } else if (num > 50 && num <= 80) {
-      return "Busy";
-    } else if (num > 80 && num < 100) {
-      return "Packed";
+      return "bar0";
+    } else if (num > 0 && num <= 10) {
+      return "bar10";
+    } else if (num > 11 && num <= 20) {
+      return "bar20";
+    } else if (num > 21 && num <= 30) {
+      return "bar30";
+    } else if (num > 31 && num <= 40) {
+      return "bar40";
+    } else if (num > 41 && num <= 50) {
+      return "bar50";
+    } else if (num > 51 && num <= 60) {
+      return "bar60";
+    } else if (num > 61 && num <= 70) {
+      return "bar70";
+    } else if (num > 71 && num <= 80) {
+      return "bar80";
+    } else if (num > 81 && num <= 90) {
+      return "bar90";
+    } else if (num > 91 && num <= 100) {
+      return "bar100";
     }
   };
 
@@ -57,7 +69,7 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
               </p>
               <div className="button-group">
                 <span className="sort-btn" onClick={() => setShowOptions((prevData) => !prevData)}>
-                  {sortOption}
+                  {sortOption.split(/(?=[A-Z])/).join(" ")}
                 </span>{" "}
                 <span onClick={() => setStep(3)}>Reset</span>
               </div>

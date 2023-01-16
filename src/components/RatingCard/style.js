@@ -158,20 +158,38 @@ const RatingCardStyle = styled.div`
       padding: 21px 10px 26px 10px;
       gap: 10px;
       position: relative;
-      .Zero {
+      .bar0 {
         background: url("0.svg");
       }
-      .Packed {
-        background: url("100.svg");
+      .bar10 {
+        background: url("10.svg");
       }
-      .Busy {
-        background: url("80.svg");
+      .bar20 {
+        background: url("20.svg");
       }
-      .Calm {
+      .bar30 {
+        background: url("30.svg");
+      }
+      .bar40 {
+        background: url("40.svg");
+      }
+      .bar50 {
         background: url("50.svg");
       }
-      .Dead {
-        background: url("25.svg");
+      .bar60 {
+        background: url("60.svg");
+      }
+      .bar70 {
+        background: url("70.svg");
+      }
+      .bar80 {
+        background: url("80.svg");
+      }
+      .bar90 {
+        background: url("90.svg");
+      }
+      .bar100 {
+        background: url("100.svg");
       }
       .packed-status {
         background-size: cover;
