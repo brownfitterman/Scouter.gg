@@ -129,7 +129,7 @@ const handleSortOption = (option) => {
     case "MostReviewed":
       return {
         sortBy: "Rating_n",
-        sortDirection: "asc",
+        sortDirection: "desc",
       };
       break;
     case "TopRate":
@@ -176,10 +176,8 @@ export function handlePlaces({
           place.Longitude
         );
       });
-      let sortedPlaces = res.data.data.sort((p1, p2) =>
-        p1.distance > p2.distance ? 1 : p1.distance < p2.distance ? -1 : 0
-      );
-      setPlaces(sortedPlaces);
+
+      setPlaces(res.data.data);
       setIsLoading(false);
     });
 }
