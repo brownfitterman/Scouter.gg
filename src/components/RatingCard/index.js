@@ -35,23 +35,23 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
       return "bar0";
     } else if (num > 0 && num <= 10) {
       return "bar10";
-    } else if (num > 11 && num <= 20) {
+    } else if (num >= 11 && num <= 20) {
       return "bar20";
-    } else if (num > 21 && num <= 30) {
+    } else if (num >= 21 && num <= 30) {
       return "bar30";
-    } else if (num > 31 && num <= 40) {
+    } else if (num >= 31 && num <= 40) {
       return "bar40";
-    } else if (num > 41 && num <= 50) {
+    } else if (num >= 41 && num <= 50) {
       return "bar50";
-    } else if (num > 51 && num <= 60) {
+    } else if (num >= 51 && num <= 60) {
       return "bar60";
-    } else if (num > 61 && num <= 70) {
+    } else if (num >= 61 && num <= 70) {
       return "bar70";
-    } else if (num > 71 && num <= 80) {
+    } else if (num >= 71 && num <= 80) {
       return "bar80";
-    } else if (num > 81 && num <= 90) {
+    } else if (num >= 81 && num <= 90) {
       return "bar90";
-    } else if (num > 91 && num <= 100) {
+    } else if (num >= 91 && num <= 100) {
       return "bar100";
     }
   };
@@ -113,16 +113,10 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
             {places?.map((place, index) => (
               <div className="rating-cards">
                 <div className="rating-meter">
-                  <span
-                    className={
-                      "packed-status " + statusCard(place[`BusyHours${day}`].split(",")[hour - 1])
-                    }
-                  >
-                    <span>{`${place[`BusyHours${day}`].split(",")[hour - 1]}%`}</span>
+                  <span className={"packed-status " + statusCard(place.CurrentPopularity)}>
+                    <span>{place.CurrentPopularity}</span>
                   </span>
-                  <span className="status">
-                    {status(place[`BusyHours${day}`].split(",")[hour - 1])}
-                  </span>
+                  <span className="status">{status(place.CurrentPopularity)}</span>
                 </div>
                 <div className="rating-info">
                   <h2>{place.PlaceName}</h2>
