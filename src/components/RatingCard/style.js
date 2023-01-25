@@ -4,9 +4,7 @@ import packed from "../../assets/images/100.svg";
 
 const RatingCardStyle = styled.div`
   color: #ffffff;
-  @media screen and (max-width: 767px) {
-    padding: 0 20px;
-  }
+
   .wrapper {
     position: sticky;
     top: 100px;
@@ -15,6 +13,7 @@ const RatingCardStyle = styled.div`
     width: 100%;
     @media screen and (max-width: 767px) {
       top: 66px;
+      padding: 0 10px;
     }
   }
   .acton-strip {
@@ -146,7 +145,7 @@ const RatingCardStyle = styled.div`
     margin-top: 25px;
     @media screen and (max-width: 767px) {
       gap: 30px;
-      padding: 0 10px;
+      padding: 0 20px;
       margin-top: 0px;
     }
     .rating-cards {

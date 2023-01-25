@@ -65,7 +65,7 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
           <div className="wrapper">
             <div className="acton-strip">
               <p>
-                Hand-picked places for you <span>Nearby</span>
+                Hand-picked places for you <span>{sortOption}</span>
               </p>
               <div className="button-group">
                 <span className="sort-btn" onClick={() => setShowOptions((prevData) => !prevData)}>
