@@ -74,6 +74,9 @@ const RatingCardStyle = styled.div`
           @media screen and (max-width: 767px) {
             margin-right: 10px;
           }
+          @media screen and (max-width: 375px) {
+            margin-right: 5px;
+          }
         }
       }
     }

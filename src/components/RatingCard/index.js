@@ -65,12 +65,12 @@ const RatingCard = ({ places, setStep, setSortOption, isLoading, sortOption }) =
           <div className="wrapper">
             <div className="acton-strip">
               <p>
-                Hand-picked places for you <span>{sortOption}</span>
+                Hand-picked places for you <span> {sortOption.split(/(?=[A-Z])/).join(" ")}</span>
               </p>
               <div className="button-group">
                 <span className="sort-btn" onClick={() => setShowOptions((prevData) => !prevData)}>
                   {sortOption.split(/(?=[A-Z])/).join(" ")}
-                </span>{" "}
+                </span>
                 <span onClick={() => setStep(3)}>Reset</span>
               </div>
               {showOptions && (
